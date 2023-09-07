@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 
-const button = cva("flex justify-center items-center rounded-full", {
+const button = cva("flex justify-center items-center rounded-full hover:green-shadow-2xl disabled:opacity-50 cursort-not-allowed", {
     variants: {
         intent: {
             primary: "bg-gradient-primary-500 text-white",
@@ -23,6 +23,7 @@ export interface ButtonProps
     VariantProps<typeof button> { 
         rightIcon?: React.ReactNode;
         isIcon?: boolean;
+        disabled?: boolean;
     }
     
 const Button: React.FC<ButtonProps> = ({
@@ -31,11 +32,12 @@ const Button: React.FC<ButtonProps> = ({
     className,
     children,
     isIcon,
+    disabled,
     rightIcon,
     ...props
 }) => {
   return (
-    <button className={button({ intent, size, class: className })} {...props}>
+    <button className={button({ intent, size, class: className })} disabled={disabled} {...props}>
       {children}
       {isIcon && <span className={cn("ml-2 inline-flex shrink-0 self-center")}>{rightIcon}</span>}
     </button>

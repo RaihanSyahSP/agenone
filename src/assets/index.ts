@@ -1,3 +1,4 @@
 import RightIconButton from "./rightIcon";
+import LogoIcon from "./logo";
 
-export { RightIconButton };
+export { RightIconButton, LogoIcon };
