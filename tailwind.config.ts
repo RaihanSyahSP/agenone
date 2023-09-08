@@ -13,6 +13,7 @@ const config: Config = {
         "gradient-primary-300": "linear-gradient(to right bottom, var(--color-primary-start-300), var(--color-primary-end-300))",
         "gradient-primary-400": "linear-gradient(to right bottom, var(--color-primary-start-400), var(--color-primary-end-400))",
         "gradient-primary-500": "linear-gradient(to right bottom, var(--color-primary-start-500), var(--color-primary-end-500))",
+        "hero-pattern": "url('/public/background.png')",
       },
       colors: {
         secondary: {
