@@ -56,16 +56,16 @@
 
 @layer  utilities{
   .display-lg-bold {
-    @apply text-[44px] font-bold leading-[52px];
+    @apply text-[72px] font-bold leading-[52px];
   }
   .display-lg-semibold {
-    @apply text-[44px] font-semibold leading-[52px];
+    @apply text-[72px] font-semibold leading-[52px];
   }
   .display-lg-medium {
-    @apply text-[44px] font-medium leading-[52px];
+    @apply text-[72px] font-medium leading-[52px];
   }
   .display-lg-regular {
-    @apply text-[44px] font-normal leading-[52px];
+    @apply text-[72px] font-normal leading-[52px];
   }
   .display-sm-bold {
     @apply text-[44px] font-bold leading-[40px] tracking-[-0.96px];

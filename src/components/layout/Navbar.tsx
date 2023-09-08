@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { LogoIcon } from '@/assets'
 import { AiOutlineMenu } from "react-icons/ai";
@@ -10,14 +10,33 @@ import Button from '../button'
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
+
   const menu = [
     { name: "Home", url: "/" },
-    { name: "Services",url: "/"},
+    { name: "Services", url: "/" },
     { name: "Project", url: "/" },
     { name: "About", url: "/" },
   ];
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    });
+  }, []);
+
+  const navbarClasses = cn(
+    "w-full fixed top-0 z-50 transition-all duration-300",
+    scrolling ? "backdrop-blur-sm" : "bg-transparent backdrop-blur-0"
+  );
+
   return (
-    <nav className="w-full fixed top-0 bg-secondary-900">
+    <>
+    <nav className={navbarClasses}>
       <div className={`justify-between items-center px-4 mx-auto lg:max-w-7xl md:items-center md:h-[94px] md:flex md:px-8`}>
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -51,7 +70,9 @@ const Navbar = () => {
         </div>
         <Button className="hidden md:block">Contact Us</Button>
       </div>
-    </nav>
+      </nav>
+      <div className="absolute z-auto top-[-150px] left-[-150px] w-96 h-96 rounded-full opacity-[0.1] bg-white filter blur-[190px]"></div>
+       </>
   );
 };
 export default Navbar;
