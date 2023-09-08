@@ -15,6 +15,9 @@ const config: Config = {
         "gradient-primary-500": "linear-gradient(to right bottom, var(--color-primary-start-500), var(--color-primary-end-500))",
         "hero-pattern": "url('/public/background.png')",
       },
+      backgroundColor: {
+        "gray-transparent": "rgba(255, 255, 255, 0.10)",
+      },
       colors: {
         secondary: {
           50: "var(--color-secondary-50)",

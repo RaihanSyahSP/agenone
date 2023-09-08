@@ -54,6 +54,159 @@
   --color-secondary-900: rgb(var(--tw-color-secondary-900));
 }
 
+@layer  utilities{
+  .display-lg-bold {
+    @apply text-[44px] font-bold leading-[52px];
+  }
+  .display-lg-semibold {
+    @apply text-[44px] font-semibold leading-[52px];
+  }
+  .display-lg-medium {
+    @apply text-[44px] font-medium leading-[52px];
+  }
+  .display-lg-regular {
+    @apply text-[44px] font-normal leading-[52px];
+  }
+  .display-sm-bold {
+    @apply text-[44px] font-bold leading-[40px] tracking-[-0.96px];
+  }
+  .display-sm-semibold {
+    @apply text-[44px] font-semibold leading-[40px] tracking-[-0.96px];
+  }
+  .display-sm-medium {
+    @apply text-[44px] font-medium leading-[40px] tracking-[-0.96px];
+  }
+  .display-sm-regular {
+    @apply text-[44px] font-normal leading-[40px] tracking-[-0.96px];
+  }
+  .text-6xl-bold {
+    @apply text-[44px] font-bold leading-[52px] tracking-[-0.88px];
+  }
+  .text-6xl-semibold {
+    @apply text-[44px] font-semibold leading-[52px] tracking-[-0.88px];
+  }
+  .text-6xl-medium {
+    @apply text-[44px] font-medium leading-[52px] tracking-[-0.88px];
+  }
+  .text-6xl-regular {
+    @apply text-[44px] font-normal leading-[52px] tracking-[-0.88px];
+  }
+  .text-5xl-bold {
+    @apply text-[36px] font-bold leading-[44px];
+  }
+  .text-5xl-semibold {
+    @apply text-[36px] font-semibold leading-[44px];
+  }
+  .text-5xl-medium {
+    @apply text-[36px] font-medium leading-[44px];
+  }
+  .text-5xl-regular {
+    @apply text-[36px] font-normal leading-[44px];
+  }
+  .text-4xl-bold {
+    @apply text-[32px] font-bold leading-[40px];
+  }
+  .text-4xl-semibold {
+    @apply text-[32px] font-semibold leading-[40px];
+  }
+  .text-4xl-medium {
+    @apply text-[32px] font-medium leading-[40px];
+  }
+  .text-4xl-regular {
+    @apply text-[32px] font-normal leading-[40px];
+  }
+  .text-3xl-bold {
+    @apply text-[28px] font-bold leading-[36px];
+  }
+  .text-3xl-semibold {
+    @apply text-[28px] font-semibold leading-[36px];
+  }
+  .text-3xl-medium {
+    @apply text-[28px] font-medium leading-[36px];
+  }
+  .text-3xl-regular {
+    @apply text-[28px] font-normal leading-[36px];
+  }
+  .text-2xl-bold {
+    @apply text-[24px] font-bold leading-[32px];
+  }
+  .text-2xl-semibold {
+    @apply text-[24px] font-semibold leading-[32px];
+  }
+  .text-2xl-medium {
+    @apply text-[24px] font-medium leading-[32px];
+  }
+  .text-2xl-regular {
+    @apply text-[24px] font-normal leading-[32px];
+  }
+  .text-xl-bold {
+    @apply text-[20px] font-bold leading-[28px];
+  }
+  .text-xl-semibold {
+    @apply text-[20px] font-semibold leading-[28px];
+  }
+  .text-xl-medium {
+    @apply text-[20px] font-medium leading-[28px];
+  }
+  .text-xl-regular {
+    @apply text-[20px] font-normal leading-[28px];
+  }
+  .text-lg-bold {
+    @apply text-[18px] font-bold leading-[28px];
+  }
+  .text-lg-semibold {
+    @apply text-[18px] font-semibold leading-[28px];
+  }
+  .text-lg-medium {
+    @apply text-[18px] font-medium leading-[28px];
+  }
+  .text-lg-regular {
+    @apply text-[18px] font-normal leading-[28px];
+  }
+  .text-md-bold {
+    @apply text-[16px] font-bold leading-[24px];
+  }
+  .text-md-semibold {
+    @apply text-[16px] font-semibold leading-[24px];
+  }
+  .text-md-medium {
+    @apply text-[16px] font-medium leading-[24px];
+  }
+  .text-md-regular {
+    @apply text-[16px] font-normal leading-[24px];
+  }
+  .text-sm-bold {
+    @apply text-[14px] font-bold leading-[20px];
+  }
+  .text-sm-semibold {
+    @apply text-[14px] font-semibold leading-[20px];
+  }
+  .text-sm-medium {
+    @apply text-[14px] font-medium leading-[20px];
+  }
+  .text-sm-regular {
+    @apply text-[14px] font-normal leading-[20px];
+  }
+  .text-xs-bold {
+    @apply text-[12px] font-bold leading-[18px];
+  }
+  .text-xs-semibold {
+    @apply text-[12px] font-semibold leading-[18px];
+  }
+  .text-xs-medium {
+    @apply text-[12px] font-medium leading-[18px];
+  }
+  .text-xs-regular {
+    @apply text-[12px] font-normal leading-[18px];
+  }
+  .overline-md {
+    @apply text-[14px] font-medium leading-[20px] tracking-[1px];
+  }
+  .overline-sm {
+    @apply text-[10px] font-medium leading-[20px] tracking-[1px];
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;

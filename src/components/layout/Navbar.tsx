@@ -17,7 +17,7 @@ const Navbar = () => {
     { name: "About", url: "/" },
   ];
   return (
-    <nav className="w-full shadow fixed top-0 bg-secondary-900">
+    <nav className="w-full fixed top-0 bg-secondary-900">
       <div className={`justify-between items-center px-4 mx-auto lg:max-w-7xl md:items-center md:h-[94px] md:flex md:px-8`}>
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
