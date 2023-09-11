@@ -2,6 +2,7 @@ import React from 'react'
 import Button from '@/components/button'
 import { RightIconButton } from "@/assets";
 import { cn } from '@/lib/utils';
+import BannerCard from '@/components/bannerCard';
 
 const HomeModule = () => {
   return (
@@ -34,6 +35,9 @@ const HomeModule = () => {
       >
         Contact Us
       </Button>
+      <div>
+        <BannerCard />
+      </div>
     </div>
   );
 }
