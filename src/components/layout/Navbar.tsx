@@ -31,7 +31,7 @@ const Navbar = () => {
 
   const navbarClasses = cn(
     "w-full fixed top-0 z-50 transition-all duration-300",
-    scrolling ? "backdrop-blur-sm" : "bg-transparent backdrop-blur-0"
+    scrolling ? "backdrop-blur-sm bg-black bg-opacity-50" : "bg-transparent backdrop-blur-0"
   );
 
   return (
@@ -51,7 +51,7 @@ const Navbar = () => {
                   className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border" 
                   onClick={() => setNavbar(!navbar)}
                 >
-                {navbar ? <RxCross1 className="text-white" /> : <AiOutlineMenu className="text-white" />}
+                {navbar ? <RxCross1 className="text-white" /> : <AiOutlineMenu className="text-white " />}
               </button>
             </div>
           </div>

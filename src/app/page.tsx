@@ -1,10 +1,11 @@
 import Image from 'next/image'
-import HomeModule from '../modules/home';
+import { HomeModule, ServiceModul } from '@/modules';
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <HomeModule />
+      <ServiceModul />
     </main>
   );
 }
