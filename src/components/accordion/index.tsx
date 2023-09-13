@@ -54,8 +54,9 @@ const AccordionItem: React.FC<AccordionItemProps> = (props: AccordionItemProps) 
         <div className="bg-[#F8F8F8] mx-[24px] my-[24px] rounded-[20px] xl:w-[1280px] xl:mx-auto">  
             <header
                 className={cn(
-                "flex items-start gap-[40px] px-[60px] py-[54px] hover:cursor-pointer",
-                "text-4xl-medium",
+                "flex items-start gap-[20px] p-[24px] hover:cursor-pointer",
+                "md:gap-[40px] md:px-[60px] md:py-[54px]",
+                "text-xl-bold md:text-4xl-medium",
             )}
                 onClick={() => handleToggle(id)}
             >   
@@ -74,25 +75,24 @@ const AccordionItem: React.FC<AccordionItemProps> = (props: AccordionItemProps) 
             <div
                 ref={contentEl}
                 className={cn(
-                    "w-full flex flex-col gap-9 items-start",
-                    "pl-28 pr-20 overflow-hidden transition-height duration-500",
+                    "w-full flex flex-col gap-3 items-start text-start",
+                    "pl-8 pr-6 md:pl-28 md:gap-9 md:pr-20 overflow-hidden transition-height duration-500",
                     active === id ? "h-auto" : "h-0")
                 }
-                
                 style={
                 active === id
                     ? { height: contentEl?.current?.scrollHeight! }
                     : { height: "0px" }
                 }
             >
-                <p className='text-lg-regular'>{content}</p>
-                <div className='pb-[54px]'>
+                <p className='text-md-regular md:text-lg-regular'>{content}</p>
+                <div className='pb-[52px] md:pb-[54px]'>
                     <Image
                         src={imagePath}
                         width={1200}     
-                        height={500}
+                        height={800}
                         alt="Picture"
-                        style={{objectFit: "cover", borderRadius: "20px"}}
+                        style={{objectFit:"contain", borderRadius: "12px"}}
                     />
                 </div>
             </div>
