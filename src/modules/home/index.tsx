@@ -17,7 +17,7 @@ const HomeModule = () => {
         </p>
       </div>
       <div className={cn(`pt-[12px] text-5xl-bold w-full px-2 mx-auto text-center sm:min-w-fit sm:px-4 md:min-w-fit lg:min-w-full`)}>
-        <h1 className={cn(`bg-clip-text bg-gradient-primary-500 text-transparent md:display-lg-bold`)}>
+        <h1 className={cn(`clip-text-gradient md:display-lg-bold`)}>
           Smart Choices
         </h1>
         <h1 className={cn(` text-white md:pt-5 md:display-lg-bold`)}>

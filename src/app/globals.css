@@ -54,6 +54,12 @@
   --color-secondary-900: rgb(var(--tw-color-secondary-900));
 }
 
+@layer utilities {
+  .clip-text-gradient {
+    @apply bg-clip-text bg-gradient-primary-500 text-transparent
+  }
+}
+
 @layer  utilities{
   .display-lg-bold {
     @apply text-[72px] font-bold leading-[52px];

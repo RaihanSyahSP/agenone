@@ -6,6 +6,7 @@ import ProfileTwoIcon from "./profileTwo";
 import StarIcon from "./star";
 import WalletIcon from "./wallet";
 import BannerAssetsSmall from "./bannerCardSmall";
+import ArrowRight from "./arrowRight";
 
 export {
     RightIconButton,
@@ -15,5 +16,6 @@ export {
     ProfileTwoIcon,
     StarIcon,
     WalletIcon,
-    BannerAssetsSmall
+    BannerAssetsSmall,
+    ArrowRight
 };
