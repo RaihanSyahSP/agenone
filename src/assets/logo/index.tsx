@@ -3,7 +3,7 @@ import React from 'react'
 const LogoIcon = () => {
   return (
     <svg width="52" height="34" viewBox="0 0 52 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g id="Shapes" clip-path="url(#clip0_238_1036)">
+      <g id="Shapes" clipPath="url(#clip0_238_1036)">
         <path
           id="Shape"
           fillRule="evenodd"
@@ -16,12 +16,12 @@ const LogoIcon = () => {
       </g>
       <defs>
         <linearGradient id="paint0_linear_238_1036" x1="19.2038" y1="34.0008" x2="4.34596" y2="23.524" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#00796D" />
-          <stop offset="1" stop-color="#38C682" />
+          <stop stopColor="#00796D" />
+          <stop offset="1" stopColor="#38C682" />
         </linearGradient>
         <linearGradient id="paint1_linear_238_1036" x1="17" y1="21" x2="-2.53037" y2="18.2994" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#00796D" />
-          <stop offset="1" stop-color="#38C682" />
+          <stop stopColor="#00796D" />
+          <stop offset="1" stopColor="#38C682" />
         </linearGradient>
         <clipPath id="clip0_238_1036">
           <rect width="52" height="34" fill="white" transform="translate(0 0.000793457)" />

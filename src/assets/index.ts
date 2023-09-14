@@ -7,6 +7,8 @@ import StarIcon from "./star";
 import WalletIcon from "./wallet";
 import BannerAssetsSmall from "./bannerCardSmall";
 import ArrowRight from "./arrowRight";
+import Circle from "./circle";
+import Wave from "./wave";
 
 export {
     RightIconButton,
@@ -17,5 +19,7 @@ export {
     StarIcon,
     WalletIcon,
     BannerAssetsSmall,
-    ArrowRight
+    ArrowRight,
+    Circle,
+    Wave
 };

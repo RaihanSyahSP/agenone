@@ -5,15 +5,15 @@ const BannerAssetsSmall = () => {
     <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto" width="327" height="347" viewBox="0 0 327 347" fill="none">
       <g opacity="0.8" filter="url(#filter0_b_306_555)">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M288 16.0002C288 7.16369 280.837 0.000244141 272 0.000244141H55C46.1634 0.000244141 39 7.16369 39 16.0002V21.0002C39 29.8368 31.8366 37.0002 23 37.0002H16C7.16344 37.0002 0 44.1637 0 53.0002V331C0 339.837 7.16345 347 16 347H311C319.837 347 327 339.837 327 331V53.0002C327 44.1637 319.837 37.0002 311 37.0002H304C295.163 37.0002 288 29.8368 288 21.0002V16.0002Z"
           fill="url(#paint0_linear_306_555)"
         />
       </g>
       <defs>
-        <filter id="filter0_b_306_555" x="-100" y="-99.9998" width="527" height="547" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <filter id="filter0_b_306_555" x="-100" y="-99.9998" width="527" height="547" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="50" />
           <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_306_555" />
           <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_306_555" result="shape" />
@@ -32,7 +32,7 @@ const BannerAssetsSmall = () => {
         <defs>
           <linearGradient id="paint0_linear_296_309" x1="92" y1="232.001" x2="92" y2="-131.999" gradientUnits="userSpaceOnUse">
             <stop stop-color="white" />
-            <stop offset="1" stop-color="white" stop-opacity="0" />
+            <stop offset="1" stop-color="white" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>

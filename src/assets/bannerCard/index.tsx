@@ -9,11 +9,11 @@ const BannerAssets = () => {
           clip-rule="evenodd"
           d="M1055 18.3353C1055 8.20899 1046.79 0 1036.66 0H243.335C233.209 0 225 8.20899 225 18.3353C225 28.4616 216.791 36.6706 206.665 36.6706H20C8.95431 36.6706 0 45.6249 0 56.6706V314C0 325.046 8.95431 334 20 334H1260C1271.05 334 1280 325.046 1280 314V56.6706C1280 45.6249 1271.05 36.6706 1260 36.6706H1073.34C1063.21 36.6706 1055 28.4616 1055 18.3353Z"
           fill="url(#paint0_linear_147_1422)"
-          fill-opacity="0.8"
+          fillOpacity="0.8"
         />
       </g>
       <defs>
-        <filter id="filter0_b_147_1422" x="-100" y="-100" width="1480" height="534" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <filter id="filter0_b_147_1422" x="-100" y="-100" width="1480" height="534" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
           <feFlood flood-opacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="50" />
           <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_147_1422" />
@@ -33,7 +33,7 @@ const BannerAssets = () => {
         <defs>
           <linearGradient id="paint0_linear_296_309" x1="92" y1="232.001" x2="92" y2="-131.999" gradientUnits="userSpaceOnUse">
             <stop stop-color="white" />
-            <stop offset="1" stop-color="white" stop-opacity="0" />
+            <stop offset="1" stop-color="white" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>
