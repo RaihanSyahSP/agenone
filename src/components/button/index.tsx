@@ -1,13 +1,14 @@
 import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 
-const button = cva(`flex justify-center items-center 
+const button = cva(`flex justify-center items-center transition-all duration-300 ease-in-out
                     rounded-full hover:shadow-[0px_24px_48px_-12px_rgba(56,198,130,0.18)]
-                    disabled:opacity-50 cursort-not-allowed`,
+                    disabled:opacity-50 disabled:cursor-not-allowed`,
 {
     variants: {
         intent: {
-            primary: "bg-gradient-primary-500 text-white",
+          primary: "btn-primary",
+          secondary: "btn-secondary",
         },
         size: {
             sm: "px-[16px] py-[8px] text-sm",

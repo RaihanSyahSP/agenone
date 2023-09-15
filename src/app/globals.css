@@ -54,12 +54,15 @@
   --color-secondary-900: rgb(var(--tw-color-secondary-900));
 }
 
+/* text-gradient */
 @layer utilities {
   .clip-text-gradient {
     @apply bg-clip-text bg-gradient-primary-500 text-transparent
   }
 }
 
+
+/* typography */
 @layer  utilities{
   .display-lg-bold {
     @apply text-[72px] font-bold leading-[52px];
@@ -212,6 +215,17 @@
     @apply text-[10px] font-medium leading-[20px] tracking-[1px];
   }
 }
+
+ /*button  */
+@layer utilities {
+  .btn-primary {
+    @apply bg-gradient-primary-500 text-white;
+  }
+  .btn-secondary {
+    @apply bg-white text-gray-500;
+  }
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root {

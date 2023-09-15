@@ -8,7 +8,7 @@ const AchievementsModule = () => {
       <div className="absolute top-10 left-10">
         <Circle />
       </div>
-      <div className="absolute right-0 top-[94px] md:top-[83px]">
+      <div className="absolute right-0 top-[94px] md:top-[70px]">
         <Wave />
       </div>
       <section className="w-full pt-[56px] px-[24px] md:px-[80px] md:pt-[80px]">

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { HomeModule, ServiceModul, AchievementsModule } from '@/modules';
+import { HomeModule, ServiceModul, AchievementsModule, ProjectModule } from '@/modules';
 
 export default function Home() {
   return (
@@ -7,6 +7,7 @@ export default function Home() {
       <HomeModule />
       <ServiceModul />
       <AchievementsModule />
+      <ProjectModule />
     </main>
   );
 }
