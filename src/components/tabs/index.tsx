@@ -1,58 +1,136 @@
 "use client"
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Button from "../button";
+import { cn } from "@/lib/utils";
 
-interface Content {
+interface DetailContent {
     id: number;
-    label: string;
     title: string;
     content: string;
     imagePath: string;
 }
+interface Content {
+    id: number;
+    label: string;
+    detailContent: DetailContent[];
+}
 
 const tabsContents: Content[] = [
-    {
+  {
+    id: 1,
+    label: "UI/UX Design",
+    detailContent: [
+      {
         id: 1,
-        label: "UI/UX Design",
         title: "UI/UX Design",
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ad necessitatibus voluptates dicta atque inventore.",
-        imagePath: "/image-service.png"
-    },
-    {
+        content: "We are designed to help your business thrive in the online world.",
+        imagePath: "/img-project1.png",
+      },
+      {
         id: 2,
-        label: "Digital Marketing",
+        title: "UI/UX Design",
+        content: "We are designed to help your business thrive in the online world.",
+        imagePath: "/img-project2.png",
+      },
+    ],
+  },
+  {
+    id: 2,
+    label: "Digital Marketing",
+    detailContent: [
+      {
+        id: 1,
         title: "Digital Marketing",
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ad necessitatibus voluptates dicta atque inventore.",
-        imagePath: "/image-service.png"
-    },
-    {
-        id: 3,
-        label: "Social Media Management",
+        content: "We are digitalization to help your business thrive in the online world.",
+        imagePath: "/img-project1.png",
+      },
+      {
+        id: 2,
+        title: "Digital Marketing",
+        content: "We are digitalization to help your business thrive in the online world.",
+        imagePath: "/img-project2.png",
+      },
+    ],
+  },
+  {
+    id: 3,
+    label: "Social Media Management",
+    detailContent: [
+      {
+        id: 1,
         title: "Social Media Management",
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ad necessitatibus voluptates dicta atque inventore.",
-        imagePath: "/image-service.png"
-    },
-    {
-        id: 4,
-        label: "Development",
+        content: "We are menaged to help your business thrive in the online world.",
+        imagePath: "/img-project1.png",
+      },
+      {
+        id: 2,
+        title: "Social Media Management",
+        content: "We are menaged to help your business thrive in the online world.",
+        imagePath: "/img-project2.png",
+      },
+    ],
+  },
+  {
+    id: 4,
+    label: "Development",
+    detailContent: [
+      {
+        id: 1,
         title: "Development",
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ad necessitatibus voluptates dicta atque inventore.",
-        imagePath: "/image-service.png"
-    }
-]
+        content: "We are developed to help your business thrive in the online world.",
+        imagePath: "/img-project1.png",
+      },
+      {
+        id: 2,
+        title: "Development",
+        content: "We are developed to help your business thrive in the online world.",
+        imagePath: "/img-project2.png",
+      },
+    ],
+  },
+];
+
+const tabsCard = ({ id, label, detailContent }: Content) => {
+    return (
+      <div className={cn("flex gap-[20px] mt-[40px]")}>
+        {detailContent.map((content, index) => (
+            <div key={index} className={
+                cn("w-[530px] h-[655px] bg-secondary-800 rounded-[32px] p-[16px] border-gray-700 border")
+            }>
+            <div 
+              className="flex"
+              style={{
+                position: "relative",
+              }}
+            >
+              <Image
+                src={content.imagePath}
+                alt="image-service"
+                width="598"
+                height="579"
+                style={{
+                  objectFit: "cover",
+                  borderRadius: "20px",
+                }}
+              />
+            </div>
+            <div className="flex flex-col items-stretch text-left gap-[12px] pt-[24px]">
+              <h1 className="text-4xl-bold">{content.title}</h1>
+              <p className="text-xl-regular opacity-[0.8]">{content.content}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+}
 
 const Tabs = () => {
     const [activeTab, setActiveTab] = useState(0);
-
-
-    useEffect(() => {
-        console.log("activeTab", activeTab);
-    }, [activeTab])
-        
-  return (
-    <div className="mx-auto mt-[56px]">
-        <div>
+    return (
+      <>
+        <div className="mx-auto">
             <div className="flex align-middle bg-white rounded-full p-[8px]">
                 {tabsContents.map((tab, index) => (
                     <Button
@@ -66,7 +144,14 @@ const Tabs = () => {
                 ))}
             </div>      
         </div>
-    </div>
+        <div className="mx-auto ">
+            {tabsContents.map((tab, index) => (
+                <div key={index}>
+                    {activeTab === index && tabsCard(tab)}
+                </div>
+            ))}
+        </div>
+    </>
   )
 }
 
