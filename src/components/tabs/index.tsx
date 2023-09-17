@@ -96,25 +96,23 @@ const tabsCard = ({ id, label, detailContent }: Content) => {
     return (
       <div className={cn("flex gap-[20px] mt-[40px]")}>
         {detailContent.map((content, index) => (
-            <div key={index} className={
-                cn("w-[530px] h-[655px] bg-secondary-800 rounded-[32px] p-[16px] border-gray-700 border")
-            }>
-            <div 
-              className="flex"
-              style={{
-                position: "relative",
-              }}
-            >
-              <Image
-                src={content.imagePath}
-                alt="image-service"
-                width="598"
-                height="579"
-                style={{
-                  objectFit: "cover",
-                  borderRadius: "20px",
-                }}
-              />
+          <div key={index} className={cn("w-[530px] h-[655px] bg-secondary-800 rounded-[32px] p-[16px] border-gray-700 border")}>
+            <div className="relative group cursor-pointer">
+                <Image
+                    src={content.imagePath}
+                    alt="image-service"
+                    width={598}
+                    height={579}
+                    className="object-cover rounded-20px transition-opacity duration-300 ease-in-out"
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black opacity-0 group-hover:opacity-80 transition-opacity duration-300 ease-in-out">
+                    <Image
+                        src="/hover-icon.png"
+                        alt="hover-icon"
+                        width={218}
+                        height={218}
+                    />
+                </div>
             </div>
             <div className="flex flex-col items-stretch text-left gap-[12px] pt-[24px]">
               <h1 className="text-4xl-bold">{content.title}</h1>
