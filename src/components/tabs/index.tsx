@@ -103,9 +103,9 @@ const tabsCard = ({ id, label, detailContent }: Content) => {
                     alt="image-service"
                     width={598}
                     height={579}
-                    className="object-cover rounded-20px transition-opacity duration-300 ease-in-out"
+                    className="object-cover rounded-[20px] transition-opacity duration-300 ease-in-out"
                 />
-                <div className="absolute inset-0 flex items-center justify-center bg-black opacity-0 group-hover:opacity-80 transition-opacity duration-300 ease-in-out">
+                <div className="absolute inset-0 flex items-center justify-center bg-black opacity-0 rounded-[20px] group-hover:opacity-80 transition-opacity duration-300 ease-in-out">
                     <Image
                         src="/hover-icon.png"
                         alt="hover-icon"
