@@ -21,5 +21,5 @@ export {
     BannerAssetsSmall,
     ArrowRight,
     Circle,
-    Wave
+    Wave,
 };

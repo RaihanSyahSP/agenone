@@ -1,13 +1,18 @@
 import React from 'react'
 import { cn } from '@/lib/utils'
 import { Tabs } from '@/components';
+import Image from 'next/image';
 
 const ProjectModule = () => {
+  const companyLogoPath = [
+    "/slack.png", "/google.png", "/netflix.png", "/air-bnb.png", "/adobe.png", "/microsoft.png"
+  ]
+
     return (
       <div
         className={cn(
           "w-full h-[1420px] bg-secondary-900 bg-[url('/backgroundProject.png')] bg-cover bg-center",
-          "md:h-[1144px] lg:h-[1303px]"
+          "md:h-[1144px] lg:h-fit"
         )
       }>
         <div
@@ -26,6 +31,24 @@ const ProjectModule = () => {
               </p>
             </div>
             <Tabs />
+          </div>
+        </div>
+        <div className='bg-gray-900 max-w-full mt-24 border-t border-gray-700'>
+          <div className={cn(
+            "w-fit mx-auto grid grid-cols-2 py-[12px] gap-1",
+            "md:grid-cols-3 md:py-[24px]",
+            "lg:flex lg:justify-between lg:w-fit",
+            "xl:px-[80px] xl:grid-cols-1 xl:py-[32px] xl:w-[1280px]"
+          )}>  
+            {companyLogoPath.map((path, index) => (
+                <Image
+                  key={index}
+                  src={path}
+                  alt={path[index]}
+                  width={160}
+                  height={94}
+                />
+              ))}
           </div>
         </div>
       </div>
