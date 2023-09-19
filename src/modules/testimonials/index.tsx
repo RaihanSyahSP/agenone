@@ -1,5 +1,6 @@
 import React from 'react'
 import { TestimonialCard } from '@/components'
+import { cn } from '@/lib/utils';
 
 const data = [
   {
@@ -63,14 +64,21 @@ const data = [
 
 const TestimonialsModule = () => {
   return (
-      <div className="w-full h-fit grid grid-cols-2 gap-10 bg-white xl:h-[800px]">
-        {
-        data.map((item) => (
-          <TestimonialCard key={item.id} {...item} />
-        ))
-        }
-      </div>
-  )
+    <div
+      className={cn(
+        "w-full h-fit grid grid-cols-1 px-[24px] mt-80 mx-auto gap-10 bg-white",
+        "overflow-hidden [mask-image:_linear-gradient(to_top,transparent_0,_black_128px,_black_calc(100%-100px),transparent_100%)]",
+        "md:grid-cols-2 md:px-[60px] md:mt-28",
+        "lg:mt-10 xl:h-[800px] xl:px-[108px] xl:max-w-max"
+      )}
+    >
+      {data.map((item, index) => (
+        <div key={item.id}>
+          <TestimonialCard {...item} />
+        </div>
+      ))}
+    </div>
+  );
 }
 
 export default TestimonialsModule

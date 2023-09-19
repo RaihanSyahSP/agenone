@@ -41,6 +41,15 @@ const config: Config = {
         "green-shadow-2xl": "0px 24px 48px -12px rgba(56, 198, 130, 0.18)",
         "green-shadow-3xl": "0px 1px 4px 0px rgba(56, 198, 130, 0.1)",
       },
+      animation: {
+        "infinite-scroll": "infinite-scroll 15s linear infinite",
+      },
+      keyframes: {
+        "infinite-scroll": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(-100%)" },
+        },
+      },
     },
   },
   plugins: [],
