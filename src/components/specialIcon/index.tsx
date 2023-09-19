@@ -10,8 +10,8 @@ interface SpecialIconProps {
 const SpecialIcon: React.FC<SpecialIconProps> = ({ icon, title, className, ...props }) => {
   return (
     <div className={cn(
-        "flex flex-col justify-center mx-auto pt-14 pb-10 items-center",
-        "gap-[10px] md:w-[700px] md:h-[230px]",
+        "flex flex-col justify-center mx-auto pt-12 pb-10 items-center",
+        "gap-[10px] md:pt-10 md:w-[700px] lg:pt-0 lg:h-[200px] xl:h-[230px] xl:pt-14",
         className
     )} >
         <div className={cn(
@@ -20,13 +20,13 @@ const SpecialIcon: React.FC<SpecialIconProps> = ({ icon, title, className, ...pr
         >
               <div className={cn(
                     "flex w-[88px] h-[88px] p-[18px]",
-                    "justify-center items-center gap-[10px]",
+                    "justify-center items-center  gap-[10px]",
                     "rounded-full border-2 border-[#00796D] bg-white"
               )}>
                 {icon}
               </div>      
         </div>
-      <p className="text-2xl-medium text-white ">{title}</p>
+      <p className="text-2xl-medium text-white md:text-xl-medium xl:text-2xl-medium">{title}</p>
     </div>
   );
 };

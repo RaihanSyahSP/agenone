@@ -122,7 +122,7 @@ const tabsCard = ({ detailContent }: Content) => {
         {detailContent.map((content, index) => (
             <div key={index}
                 className={cn(
-                    "w-[327px] h-[412px] bg-secondary-800 rounded-[32px] p-[12px] border-gray-700 border",
+                    "w-full h-[412px] bg-secondary-800 rounded-[32px] p-[12px] border-gray-700 border",
                     "md:w-[350px] md:h-[500px] md:p-[16px]",
                     "xl:w-[530px] xl:h-[655px] xl:p-[16px]"
                 )
