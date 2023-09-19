@@ -33,7 +33,7 @@ const ProjectModule = () => {
             <Tabs />
           </div>
         </div>
-        <div className='bg-gray-900 max-w-full mt-24 border-t border-gray-700'>
+        <div className='bg-gray-900 h-[375px] md:h-[250px] lg:h-[158px] mt-24 border-t border-gray-700'>
           <div className={cn(
             "w-fit mx-auto grid grid-cols-2 py-[12px] gap-1",
             "md:grid-cols-3 md:py-[24px]",
