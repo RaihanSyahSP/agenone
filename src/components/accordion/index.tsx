@@ -2,7 +2,7 @@
 
 import { ArrowRight } from '@/assets';
 import { cn } from '@/lib/utils';
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 
 interface Content {
@@ -45,10 +45,40 @@ const contents = [
     }
 ]
 
+function getAbbreviatedLabel(label: string, windowWidth: number) {
+  if (windowWidth < 350) {
+    switch (label) {
+      case "UI/UX Design":
+        return "UI/UX";
+      case "Digital Marketing":
+        return "Digital";
+      case "Social Media Management":
+        return "SMM";
+      case "Development":
+        return "Dev";
+      default:
+        return label;
+    }
+  }
+  return label;
+}
+
 const AccordionItem: React.FC<AccordionItemProps> = (props: AccordionItemProps) => {
     const contentEl = useRef<HTMLDivElement>(null);
     const { handleToggle, active, items } = props;
     const { id, title, content, imagePath } = items;
+    const [windowWidth, setWindowWidth] = useState(0); // Initialize with 0 or some default value
+
+     useEffect(() => {
+       const handleWindowResize = () => {
+         setWindowWidth(window.innerWidth);
+       };
+       window.addEventListener("resize", handleWindowResize);
+       setWindowWidth(window.innerWidth);
+       return () => {
+         window.removeEventListener("resize", handleWindowResize);
+       };
+     }, []);
 
     return (
         <div className="bg-[#F8F8F8] mx-[24px] my-[24px] rounded-[20px] xl:w-[1280px] xl:mx-auto">  
@@ -65,7 +95,7 @@ const AccordionItem: React.FC<AccordionItemProps> = (props: AccordionItemProps) 
                 </h2>
                 <div className='flex justify-between w-full'>
                     <h2 className={`${active === id ? "active clip-text-gradient" : ""}`}>
-                        {title}
+                        {getAbbreviatedLabel(title, windowWidth)}
                     </h2>
                     <div className={`transition-all ${active === id ? "rotate-90" : ""}`}>
                         <ArrowRight active={active} id={id} />

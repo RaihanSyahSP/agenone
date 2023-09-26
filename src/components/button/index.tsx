@@ -13,7 +13,8 @@ const button = cva(
                           primary: "btn-primary",
                           secondary: "btn-secondary",
                         },
-                        size: {
+                      size: {
+                            xs: "px-[8px] py-[4px] text-xs", 
                             sm: "px-[16px] py-[8px] text-sm",
                             md: "px-[24px] py-[16px] text-base",
                             lg: "px-[32px] py-[20px] text-lg",

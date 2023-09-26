@@ -57,8 +57,8 @@ const BannerCard = () => {
               <SpecialIcon key={content.title} title={content.title} icon={content.icon} />
             ))}
           </div>
-          <div className="w-[314px] mx-auto md:w-[700px] lg:hidden">
-            <Swiper modules={[Pagination]} slidesPerView={1} pagination={{ clickable: true }}>
+          <div className="w-[260px] mx-auto md:w-[700px] lg:hidden">
+            <Swiper modules={[Pagination]} slidesPerView={1} pagination={{ clickable: true }} className='max-w-[260px]'>
               {contents?.map((content) => (
                 <SwiperSlide key={content.title}>
                   <SpecialIcon key={content.title} title={content.title} icon={content.icon}/>

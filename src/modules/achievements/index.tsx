@@ -4,7 +4,7 @@ import { AchievementsCard } from '@/components';
 
 const AchievementsModule = () => {
   return (
-    <div className="relative bg-gradient-primary-50 h-[836px] sm:h-[561px] md:h-[580px] lg:h-[561px]">
+    <div className="relative bg-gradient-primary-50 h-[890px] sm:h-[561px] md:h-[580px] lg:h-[561px]">
       <div className="absolute top-10 left-10">
         <Circle />
       </div>

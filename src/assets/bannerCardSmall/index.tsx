@@ -2,7 +2,7 @@ import React from "react";
 
 const BannerAssetsSmall = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto" width="327" height="347" viewBox="0 0 327 347" fill="none">
+    <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto" width="w-full" height="347" viewBox="0 0 327 347" fill="none">
       <g opacity="0.8" filter="url(#filter0_b_306_555)">
         <path
           fillRule="evenodd"

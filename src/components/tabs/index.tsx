@@ -110,6 +110,16 @@ function getAbbreviatedLabel(label: string, windowWidth: number) {
     return label;
 }
 
+function getButtonSize(windowWidth: number) {
+    if (windowWidth < 350) {
+        return "xs";
+    } else if (windowWidth > 350 && windowWidth < 768) {
+        return "sm";
+    } else {
+        return "md";
+    }
+}
+
 
 const tabsCard = ({ detailContent }: Content) => {
     return (
@@ -122,9 +132,9 @@ const tabsCard = ({ detailContent }: Content) => {
         {detailContent.map((content, index) => (
             <div key={index}
                 className={cn(
-                    "w-[300px] mx-auto h-[412px] bg-secondary-800 rounded-[32px] p-[12px] border-gray-700 border",
-                    "md:w-[350px] md:h-[500px] md:p-[16px]",
-                    "xl:w-[530px] xl:h-[655px] xl:p-[16px]"
+                    "max-w-[270px] mx-auto max-h-[412px] bg-secondary-800 rounded-[32px] p-[12px] border-gray-700 border",
+                    "md:max-w-[350px] md:max-h-[500px] md:p-[16px]",
+                    "xl:max-w-[530px] xl:max-h-[655px] xl:p-[16px]"
                 )
             }>
             <div className="relative group cursor-pointer">
@@ -186,7 +196,7 @@ const Tabs = () => {
                     <Button
                         key={index}
                         intent={activeTab === index ? "primary" : "secondary"}
-                        size={windowWidth < 768 ? "sm" : "md"}
+                        size={getButtonSize(windowWidth)}
                         onClick={() => setActiveTab(index)}
                     >
                         {getAbbreviatedLabel(tab.label, windowWidth)}
