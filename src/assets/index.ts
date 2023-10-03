@@ -9,6 +9,7 @@ import BannerAssetsSmall from "./bannerCardSmall";
 import ArrowRight from "./arrowRight";
 import Circle from "./circle";
 import Wave from "./wave";
+import { CircleOutlinedFooterRight, CircleOutlinedFooterLeft } from "./circle-outlined";
 
 export {
     RightIconButton,
@@ -22,4 +23,6 @@ export {
     ArrowRight,
     Circle,
     Wave,
+    CircleOutlinedFooterRight,
+    CircleOutlinedFooterLeft
 };
