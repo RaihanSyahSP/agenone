@@ -5,30 +5,30 @@ import { cn } from '@/lib/utils';
 
 const HeadlineFooter = () => {
   return (
-    <div className="bg-gray-900 mx-16 max-h-[184px] rounded-t-[40px] border-b border-gray-700">
-      <div className="flex justify-between items-center max-w-5xl mx-auto py-11 px-8">
-        <div className="max-w-[600px]">
-          <h1 className="text-6xl-semibold text-white">Let’s discuss and bring your vision to life.</h1>
+    <div className="bg-gray-900 min-h-[175px] rounded-t-[40px] border-b border-gray-700 mx-5 lg:mx-24">
+      <div className="flex flex-col justify-between items-center max-w-5xl mx-auto py-11 px-8 gap-5 md:py-11 md:flex-row">
+        <div className="max-w-[520px]">
+          <h1 className=" text-2xl-semibold text-white md:text-4xl-semibold lg:text-6xl-semibold">Let&apos;s discuss and bring your vision to life.</h1>
         </div>
         <div>
           <Button isIcon={true} rightIcon={<RightIconButton />} size={"lg"}>
-            Let&rsquo;s Talk
+            Let&apos;s Talk
           </Button>
         </div>
-      d</div>
+      </div>
     </div>
   );
 }
 
 const FooterNav = () => {
   return (
-    <div className="relative min-h-[505px] bg-gray-900 text-white py-[50px] px-[80px]">
+    <div className="relative min-h-[505px] bg-gray-900 text-white py-[50px] md:px-[40px] lg:px-[80px]">
       <div className="border-b border-gray-700 flex flex-col md:flex-row justify-between">
         <div className="flex flex-col max-w-[413px] gap-[50px] px-4 py-6">
           <div className="flex flex-col gap-[25px] h-[143px]">
             <a href="#" className="flex justify-between w-40">
               <LogoIcon />
-              <p className={cn("text-white font-bold italic text-2xl")}>Agenone</p>
+              <p className="text-white font-bold italic text-2xl">Agenone</p>
             </a>
             <p className="text-lg-regular text-gray-200">We&rsquo;re a team of experienced designers, developers, and marketers, passionate about delivering exceptional digital solutions.</p>
           </div>
@@ -120,12 +120,12 @@ const FooterNav = () => {
         </div>
       </div>
       <div className="text-center pt-14">
-        <p className="text-lg-regular">Copyright © 2023 by Agenone. All rights reserved.</p>
+        <p className="text-md-regular md:text-lg-regular">Copyright © 2023 by Agenone. All rights reserved.</p>
       </div>
       <div className="absolute bottom-0 right-0">
         <CircleOutlinedFooterRight />
       </div>
-      <div className="absolute bottom-24 left-0">
+      <div className="absolute top-0 left-0 lg:bottom-24">
         <CircleOutlinedFooterLeft />
       </div>
     </div>
