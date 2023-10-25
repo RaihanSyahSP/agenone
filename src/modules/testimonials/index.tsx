@@ -73,7 +73,10 @@ const TestimonialsModule = () => {
       )}
     >
       {data.map((item, index) => (
-        <div key={item.id}>
+        <div
+          key={item.id}
+          className={index % 2 === 0 ? ' md:mt-10 lg:mt-16' : ''}
+        >
           <TestimonialCard {...item} />
         </div>
       ))}
